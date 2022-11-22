@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Mabu from './components/Mabu';
+import Jani from "./components/Jani"
+import Shaik from './components/Shaik';
+import {Routes,Route} from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+     <Jani/>
+   
+     <Routes>
+    
+        <Route path="/" element={ <Shaik />}/> 
+        <Route path='/back' element={<Mabu/>}/>        
+              
+       </Routes>
+        {/* <Mabu/>  */}
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
